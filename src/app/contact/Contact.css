@@ -1,11 +1,18 @@
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  .animated-background {
-    background: linear-gradient(270deg, #9a381d, #12c70b);
-    background-size: 400% 400%;
-    animation: backgroundAnimation 15s ease infinite;
-  }
+@keyframes flicker {
+    0%, 100% { 
+        opacity: 1; 
+        filter: blur(0.6px);
+    }
+    50% { 
+        opacity: 0; 
+        filter: blur(2px); /* Increase the blur during flicker */
+    }
+}
+
+.projected-text {
+    color: #030000; /* Lighter grey color */
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.2); /* Subtle hint of red in the shadow */
+    font-family: 'Courier New', Courier, monospace;
+    filter: blur(0.6px);
+    animation: flicker 1s alternate 3;
+}
