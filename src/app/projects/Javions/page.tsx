@@ -1,14 +1,24 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import javionsPic from '@/assets/images/JavionsPic.png';
+import './Javions.css';
 
 const ProjectDescription: React.FC = () => {
+    const [overview, setOverview] = useState<string>('');
+    const router = useRouter();
+    
     useEffect(() => {
-        const audio = new Audio('/path/to/your/background-music.mp3');
-        audio.play();
+        const audio = new Audio('/audio/blackbird.mp3');
+        audio.volume = 0.1; 
+        const playPromise = audio.play();
         audio.loop = true;
+
+        playPromise.catch(error => {
+            console.error('Error playing audio:', error);
+        });
 
         return () => {
             audio.pause();
@@ -16,28 +26,59 @@ const ProjectDescription: React.FC = () => {
         };
     }, []);
 
+    useEffect(() => {
+        fetch('/text/Javions_Overview.txt')
+            .then(response => response.text())
+            .then(text => setOverview(text))
+            .catch(error => console.error('Error fetching description:', error));
+        
+    }, []);
+
     return (
-        <div style={{ backgroundColor: 'beige', padding: '20px' }}>
-            <h1 style={{ color: 'black', fontFamily: 'Eurostile' }}>Project Title</h1>
-            <p style={{ color: 'black', fontFamily: 'Eurostile' }}>This is a description of the project. It explains what the project is about, the technologies used, and any other relevant information.</p>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+        <div className="container">
+            <h1 className="title">Javions (Java)</h1>
+            <div>
+                <h2 className="subtitle">Overview</h2>
+                <p className="text">{overview}</p>
+            </div>            
+            <div className="text">
+                <h2 className="subtitle">Of note:</h2>
+                <ul className="list">
+                    <li><strong>Map</strong>: coded from scratch using openStreetMap tiles for each level of zoom, with caching for optimization</li>
+                    <li><strong>JavaFX</strong>: for the Graphical User Interface (from buttons to the window to the table)</li>
+                </ul>
+            </div>
+            <p className="text">In the following image, you can see that the path of the aircraft is colored depending on its altitude:</p>
+            <div className="image-container">
                 <Image
                     src={javionsPic}
                     alt="Project Image"
-                    style={{ width: '50%', height: 'auto' }}
+                    className="image"
                 />
             </div>
-            <p style={{ color: 'black', fontFamily: 'Eurostile' }}>Here is a demo video of the project in action:</p>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <p className="text">Here is a demo video of the project in action:</p>
+            <div className="video-container">
                 <video
-                    style={{ width: '50%', height: 'auto' }}
+                    className="video"
                     src="/videos/JavionsDemo.mp4"
                     muted
                     controls
                 />
             </div>
-            
-            
+            <div className="button-container">
+                <button 
+                    onClick={() => router.push('/projects')}
+                    className="button"
+                >
+                    ← Back to Projects
+                </button>
+                <button 
+                    onClick={() => router.push('/projects/ImgFS')}
+                    className="button"
+                >
+                    Next Project (ImgFS) →
+                </button>
+            </div>
         </div>
     );
 };

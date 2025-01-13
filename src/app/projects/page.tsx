@@ -19,6 +19,10 @@ const ProjectsPage: React.FC = () => {
         }
     };
 
+    const handleGoBackHome = () => {
+        router.push('/');
+    };
+
     return (
         <div className="projects-page">
             <video
@@ -32,8 +36,9 @@ const ProjectsPage: React.FC = () => {
             <div className="overlay-text">
                 <div className={`optionJavions ${selectedProject ? 'selected' : ''}`} onClick={() => handleOptionClick('Javions')}>Javions</div>
                 <div className={`optionImgFS ${selectedProject ? 'selected' : ''}`} onClick={() => handleOptionClick('ImgFS')}>ImgFS</div>
-                <div className={`optionClean ${selectedProject ? 'selected' : ''}`} onClick={() => handleOptionClick('Clean Up App')}>Clean Up App</div>
+                <div className={`optionClean ${selectedProject ? 'selected' : ''}`} onClick={() => handleOptionClick('CleanUp')}>Clean Up App</div>
             </div>
+            <button className="go-back-home" onClick={handleGoBackHome}>Back Home</button>
         </div>
     );
 };

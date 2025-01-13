@@ -1,0 +1,72 @@
+.container {
+    background-color: #333;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 3em;
+    color: black;
+    font-family: 'Century Gothic';
+  }
+  
+  .subtitle {
+    font-size: 2em;
+    color: darkgrey;
+    text-decoration: underline;
+    font-family: 'Century Gothic';
+  }
+  
+  .text {
+    color: black;
+    font-family: 'Century Gothic';
+  }
+  
+  .list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: black;
+  }
+  
+  .centered {
+    text-align: center;
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video {
+    width: 50%;
+    height: auto;
+  }
+  
+  .select-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .select {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Century Gothic';
+    cursor: pointer;
+  }

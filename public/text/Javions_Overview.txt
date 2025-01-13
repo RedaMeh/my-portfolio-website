@@ -1,0 +1,1 @@
+Object-oriented programming based project focusing on creating a program capable of decoding ADS-B messages transmitted by aircrafts. Once processed, information about the aircraft, including identity, position, speed, and direction can be displayed on a digital map in real-time.

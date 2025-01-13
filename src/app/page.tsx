@@ -46,7 +46,7 @@ export default function Home() {
         initial={{ color: '#B22222' }}
         animate={{ color: ['#B22222', '#E37222'] }}
         transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
-        style={{ fontFamily: 'Roland Garros' }}
+        style={{ fontFamily: 'Century gothic' }}
       >
         Welcome to my portfolio!
       </motion.h1>
@@ -55,7 +55,7 @@ export default function Home() {
           href="/projects" 
           className="mt-8 px-8 py-4 text-4xl font-bold text-black rounded-lg transition duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#E37222] hover:to-[#B22222] hover:text-[#FF9999] hover:shadow-lg hover:shadow-red-500" 
           onClick={(e) => handleLinkClick(e, '/projects')}
-          style={{ fontFamily: 'Roland Garros' }}
+          style={{ fontFamily: 'Century gothic' }}
         >
           Projects
         </Link>
@@ -63,7 +63,7 @@ export default function Home() {
           href="/contact" 
           className="mt-8 px-8 py-4 text-4xl font-bold text-black rounded-lg transition duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#E37222] hover:to-[#B22222] hover:text-[#FF9999] hover:shadow-lg hover:shadow-red-500" 
           onClick={(e) => handleLinkClick(e, '/contact')}
-          style={{ fontFamily: 'Roland Garros' }}
+          style={{ fontFamily: 'Century gothic' }}
         >
           Contact Me
         </Link>

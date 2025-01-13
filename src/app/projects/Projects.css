@@ -10,7 +10,7 @@
   
   .top-left-text {
     color: #c0720b; /* Wood color */
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Century gothic';
     position: absolute;
     top: 80px;
     left: 20px;
@@ -29,7 +29,7 @@
     cursor: pointer;
     transform: rotate(-28deg) translateY(75px) translateX(165px);
     font-size: 1.5rem;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Century gothic';
 }
 
 .optionJavions {
@@ -38,7 +38,7 @@
     cursor: pointer;
     transform: rotate(-28deg) translateY(75px) translateX(150px);
     font-size: 1.5rem;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Century gothic';
 }
 
 .optionClean {
@@ -47,7 +47,7 @@
     cursor: pointer;
     transform: rotate(-28deg) translateY(75px) translateX(220px);
     font-size: 1.5rem;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Century gothic';
 }
   
 .optionImgFS:hover, .optionJavions:hover, .optionClean:hover {
@@ -135,4 +135,23 @@
         transform: rotate(-28deg) translateY(75px) translateX(220px) scale(1.5);
         opacity: 0;
     }
+}
+
+.go-back-home {
+    color: #DEB887;
+    padding: 20px 30px; /* Adjust padding to control size */
+    border: none; 
+    border-radius: 50% 50% 0 0 / 80% 80% 0 0; /* Adjust to make it pick-shaped */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    position: absolute; 
+    bottom: 0px; 
+    left: 30px; 
+    font-family: 'Century gothic';
+}
+
+  
+.go-back-home:hover {
+    background-color: #8B4513; 
 }

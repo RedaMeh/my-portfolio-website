@@ -1,0 +1,63 @@
+.container {
+    background-color: beige;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 3em;
+    color: black;
+    font-family: 'Eurostile';
+  }
+  
+  .subtitle {
+    font-size: 2em;
+    color: black;
+    text-decoration: underline;
+    font-family: 'Eurostile';
+  }
+  
+  .text {
+    color: black;
+    font-family: 'Eurostile';
+  }
+  
+  .list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: black;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .image {
+    width: 50%;
+    height: auto;
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video {
+    width: 50%;
+    height: auto;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Eurostile';
+    cursor: pointer;
+  }
