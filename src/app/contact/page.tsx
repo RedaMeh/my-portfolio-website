@@ -15,7 +15,6 @@ export default function Contact() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0 }}
         >
-            <audio src="/audio/leavingTheater.mp3" autoPlay loop />
             <Image
                 src={backgroundImage}
                 alt="Background"

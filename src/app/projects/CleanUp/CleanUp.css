@@ -73,3 +73,10 @@
     padding: 10px 20px;
     font-family: 'Georgia', serif;
   }
+
+  .music-credit {
+    position: absolute;
+    font-size: 0.8em;
+    color: black;
+    font-family: 'Eurostile';
+  }

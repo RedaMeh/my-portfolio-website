@@ -9,6 +9,22 @@ const CleanUpPage: React.FC = () => {
     const router = useRouter();
 
     useEffect(() => {
+            const audio = new Audio('/audio/Radiohead.mp3');
+            audio.volume = 0.1; 
+            const playPromise = audio.play();
+            audio.loop = true;
+    
+            playPromise.catch(error => {
+                console.error('Error playing audio:', error);
+            });
+    
+            return () => {
+                audio.pause();
+                audio.currentTime = 0;
+            };
+        }, []);
+
+    useEffect(() => {
         fetch('/text/CleanUp_Overview.txt')
             .then(response => response.text())
             .then(text => setOverview(text))
@@ -42,6 +58,7 @@ const CleanUpPage: React.FC = () => {
                     controls
                 />
             </div>
+            <p className="music-credit">Music: Radiohead-Weird Fishes/Arpeggi instrumental</p>
             <div className="button-container">
                 <button 
                     onClick={() => router.push('/projects/ImgFS')}

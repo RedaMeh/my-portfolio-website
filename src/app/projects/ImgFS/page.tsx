@@ -71,6 +71,7 @@ const ProjectsPage: React.FC = () => {
                         }}
                     />
                 </div>
+                <p className="music-credit">Music: Weezer-My Name Is Jonas instrumental</p>
                 <div className="select-container">
                     <label htmlFor="playbackRate">Playback Speed: </label>
                     <select

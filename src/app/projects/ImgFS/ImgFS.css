@@ -70,3 +70,10 @@
     font-family: 'Century Gothic';
     cursor: pointer;
   }
+
+  .music-credit {
+    position: absolute;
+    font-size: 0.8em;
+    color: black;
+    font-family: 'Eurostile';
+  }

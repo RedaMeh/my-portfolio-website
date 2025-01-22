@@ -21,22 +21,23 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    font-family: 'Century gothic';
   }
   
 .optionImgFS {
     color: #DEB887; /* Wood color */
-    padding: 5px 10px;
+    padding: 3px;
     cursor: pointer;
-    transform: rotate(-28deg) translateY(75px) translateX(165px);
+    transform: rotate(-28deg) translateY(75px) translateX(220px);
     font-size: 1.5rem;
     font-family: 'Century gothic';
 }
 
 .optionJavions {
     color: #DEB887; /* Wood color */
-    padding: 5px 10px;
+    padding: 3px;
     cursor: pointer;
-    transform: rotate(-28deg) translateY(75px) translateX(150px);
+    transform: rotate(-28deg) translateY(75px) translateX(200px);
     font-size: 1.5rem;
     font-family: 'Century gothic';
 }
@@ -45,7 +46,7 @@
     color: #DEB887; /* Wood color */
     padding: 5px 10px;
     cursor: pointer;
-    transform: rotate(-28deg) translateY(75px) translateX(220px);
+    transform: rotate(-27deg) translateY(75px) translateX(228px);
     font-size: 1.5rem;
     font-family: 'Century gothic';
 }
@@ -62,18 +63,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
 
 .optionImgFS, .optionJavions, .optionClean {
     cursor: pointer;
@@ -94,37 +83,7 @@
 
 @keyframes shrink-grow-fade-ImgFS {
     0% {
-        transform: rotate(-28deg) translateY(75px) translateX(165px) scale(1) ;
-        opacity: 1;
-    }
-    50% {
-        transform: rotate(-28deg) translateY(75px) translateX(165px) scale(0.5);
-        opacity: 0.5;
-    }
-    100% {
-        transform: rotate(-28deg) translateY(75px) translateX(165px) scale(1.5);
-        opacity: 0;
-    }
-}
-
-@keyframes shrink-grow-fade-javions {
-    0% {
-        transform: rotate(-28deg) translateY(75px) translateX(150px) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: rotate(-28deg) translateY(75px) translateX(150px) scale(0.5);
-        opacity: 0.5;
-    }
-    100% {
-        transform: rotate(-28deg) translateY(75px) translateX(150px) scale(1.5);
-        opacity: 0;
-    }
-}
-
-@keyframes shrink-grow-fade-clean {
-    0% {
-        transform: rotate(-28deg) translateY(75px) translateX(220px) scale(1);
+        transform: rotate(-28deg) translateY(75px) translateX(220px) scale(1) ;
         opacity: 1;
     }
     50% {
@@ -137,8 +96,52 @@
     }
 }
 
+@keyframes shrink-grow-fade-javions {
+    0% {
+        transform: rotate(-28deg) translateY(75px) translateX(200px) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(-28deg) translateY(75px) translateX(200px) scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(-28deg) translateY(75px) translateX(200px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes shrink-grow-fade-clean {
+    0% {
+        transform: rotate(-27deg) translateY(75px) translateX(228px) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(-27deg) translateY(75px) translateX(228px) scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(-27deg) translateY(75px) translateX(228px) scale(1.5);
+        opacity: 0;
+    }
+}
+
 .go-back-home {
     color: #DEB887;
+    padding: 20px 30px; /* Adjust padding to control size */
+    border: none; 
+    border-radius: 50% 50% 0 0 / 80% 80% 0 0; /* Adjust to make it pick-shaped */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    position: absolute; 
+    bottom: 0px; 
+    right: 30px; /* Changed from left to right */
+    font-family: 'Century gothic';
+}
+
+.credit {
+    color: #251501;
     padding: 20px 30px; /* Adjust padding to control size */
     border: none; 
     border-radius: 50% 50% 0 0 / 80% 80% 0 0; /* Adjust to make it pick-shaped */
@@ -147,8 +150,14 @@
     transition: background-color 0.3s ease; 
     position: absolute; 
     bottom: 0px; 
-    left: 30px; 
+    left: 30px; /* Changed from left to right */
     font-family: 'Century gothic';
+}
+
+
+  
+.credit:hover {
+    background-color: #8B4513; 
 }
 
   
