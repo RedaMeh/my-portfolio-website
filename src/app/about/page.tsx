@@ -78,36 +78,37 @@ const Globe: React.FC = () => {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = true;
 
+    const radiansConversionFactor = Math.PI / 180;
     // Add pins with descriptions
     const pins = [
       { position: new THREE.Vector3(
-        Math.cos(45 * (Math.PI / 180)) * Math.cos(78 * (Math.PI / 180)),
-        Math.cos(45 * (Math.PI / 180)) * Math.sin(78 * (Math.PI / 180)),
-        Math.sin(45 * (Math.PI / 180))
+        Math.cos(45 * radiansConversionFactor) * Math.cos(78 * radiansConversionFactor),
+        Math.cos(45 * radiansConversionFactor) * Math.sin(78 * radiansConversionFactor),
+        Math.sin(45 * radiansConversionFactor),
       ), 
       description: pinDescriptions['rochester']
       },
       {
       position: new THREE.Vector3(
-        Math.cos(6 * (Math.PI / 180)) * Math.cos(34 * (Math.PI / 180)),
-        Math.cos(6 * (Math.PI / 180)) * Math.sin(34 * (Math.PI / 180)),
-        Math.sin(6 * (Math.PI / 180))
+        Math.cos(6 * radiansConversionFactor) * Math.cos(34 * radiansConversionFactor),
+        Math.cos(6 * radiansConversionFactor) * Math.sin(34 * radiansConversionFactor),
+        Math.sin(6 * radiansConversionFactor),
       ),
       description: pinDescriptions['rabat']
       },
       {
         position: new THREE.Vector3(
-          Math.cos(-5 * (Math.PI / 180)) * Math.cos(48 * (Math.PI / 180)),
-          Math.cos(-5 * (Math.PI / 180)) * Math.sin(48 * (Math.PI / 180)),
-          Math.sin(-5 * (Math.PI / 180))
+          Math.cos(-5 * radiansConversionFactor) * Math.cos(48 * radiansConversionFactor),
+          Math.cos(-5 * radiansConversionFactor) * Math.sin(48 * radiansConversionFactor),
+          Math.sin(-5 * radiansConversionFactor),
         ),
         description: pinDescriptions['lausanne']
       },
       {
         position: new THREE.Vector3(
-          Math.cos(50 * (Math.PI / 180)) * Math.cos(88 * (Math.PI / 180)),
-          Math.cos(50 * (Math.PI / 180)) * Math.sin(88 * (Math.PI / 180)),
-          Math.sin(50 * (Math.PI / 180))
+          Math.cos(50 * radiansConversionFactor) * Math.cos(88 * radiansConversionFactor),
+          Math.cos(50 * radiansConversionFactor) * Math.sin(88 * radiansConversionFactor),
+          Math.sin(50 * radiansConversionFactor),
         ),
         description: pinDescriptions['champaign']
       }

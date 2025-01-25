@@ -49,15 +49,35 @@ const CleanUpPage: React.FC = () => {
                     <li><strong>Firebase</strong>: for user authentication and cloud-based data storage</li> 
                 </ul>
             </div>
-            <p className="text">Here is a demo video of the project in action:</p>
+            <p className="text">My demonstration will focus mainly on my contribution to this app (which is all of the session logging functionality, from geolocation to image upload to admin validation). </p>
+            <p className="text">The app has two sides:</p>
+            <p className="text">         1. User side: Users can sign up, log in and start/complete sessions. Once a session is completed, all the data surrounding it is stored on Firebase, and is shown in the "logs" tab as pending session (until an admin validates it). The following is how a typical user experience would go:</p>
             <div className="video-container">
                 <video
                     className="video"
-                    src="/videos/JavionsDemo.mp4"
+                    src="/videos/UserVideoCleanUp.mp4"
                     muted
                     controls
                 />
             </div>
+            <p className="text">There is a mechanism (removed in the above demo but shown below) which blocks a user's access to the home (Session) page as long as a payment of a cleaning kit wasn't completed</p>
+            <div className="video-container">
+                <video
+                    className="video"
+                    src="/videos/BlockingPageCleanUp.mp4"
+                    muted
+                    controls
+                />
+            </div>
+            <p className="text">For the admin, a separate table in our database was added (called "admins", the other for storing all users data being called "users"), which simply contained the name of the admin to be entered in the legal Name box when signing up (using the same system as universities to avoid impersonations, e.g. Mohamed Reda Mehdaoui turning into "mrm30"). This choice was made to enable the client to add/remove admin usernames simply by going to the database on Firebase instead of needing access to the code:</p>
+            <div className="video-container">
+                <video
+                    className="video"
+                    src="/videos/AdminVideoCleanUp.mp4"
+                    muted
+                    controls
+                />
+            </div>            
             <p className="music-credit">Music: Radiohead-Weird Fishes/Arpeggi instrumental</p>
             <div className="button-container">
                 <button 

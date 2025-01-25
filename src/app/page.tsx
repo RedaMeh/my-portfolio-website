@@ -72,6 +72,14 @@ export default function Home() {
           Introduction
         </button>
         <Link 
+          href="/about" 
+          className="mt-8 px-8 py-4 text-4xl font-bold text-[#1C0000] rounded-lg transition duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#E37222] hover:to-[#B22222] hover:text-[#FF9999] hover:shadow-lg hover:shadow-red-500" 
+          onClick={(e) => handleLinkClick(e, '/about')}
+          style={{ fontFamily: 'Century gothic' }}
+        >
+          About Me
+        </Link>
+        <Link 
           href="/projects" 
           className="mt-8 px-8 py-4 text-4xl font-bold text-[#1C0000] rounded-lg transition duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#E37222] hover:to-[#B22222] hover:text-[#FF9999] hover:shadow-lg hover:shadow-red-500" 
           onClick={(e) => handleLinkClick(e, '/projects')}
@@ -86,14 +94,6 @@ export default function Home() {
           style={{ fontFamily: 'Century gothic' }}
         >
           Contact Me
-        </Link>
-        <Link 
-          href="/about" 
-          className="mt-8 px-8 py-4 text-4xl font-bold text-[#1C0000] rounded-lg transition duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#E37222] hover:to-[#B22222] hover:text-[#FF9999] hover:shadow-lg hover:shadow-red-500" 
-          onClick={(e) => handleLinkClick(e, '/about')}
-          style={{ fontFamily: 'Century gothic' }}
-        >
-          About Me
         </Link>
         <Link 
           href="https://www.pexels.com/@cottonbro/" 
