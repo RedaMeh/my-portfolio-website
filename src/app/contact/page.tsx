@@ -64,6 +64,7 @@ export default function Contact() {
                     <span className="ml-2">Go Back Home</span>
                 </button>
             </div>
+            <a href="https://www.flaticon.com/free-icons/theater" title="theater icons" className="absolute bottom-4 left-4 text-xs text-gray-500">Theater icons created by Mehwish - Flaticon</a>
         </motion.div>
     );
 }
