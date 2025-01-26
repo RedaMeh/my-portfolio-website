@@ -64,7 +64,7 @@ const CleanUpPage: React.FC = () => {
             <div className="video-container">
                 <video
                     className="video"
-                    src="/video/BlockingPageCleanUp.mp4"
+                    src="/video/BlockingPageCU.mp4"
                     muted
                     controls
                 />
