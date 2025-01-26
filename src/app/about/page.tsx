@@ -31,12 +31,10 @@ const Globe: React.FC = () => {
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    const mountElement = mountRef.current;
-  
-    if (mountElement) {
-      mountElement.appendChild(renderer.domElement);
+
+    if (mountRef.current) {
+      mountRef.current.appendChild(renderer.domElement);
     }
-    
 
     // Add a globe
     const geometry = new THREE.SphereGeometry(1, 32, 32);
@@ -178,11 +176,11 @@ const Globe: React.FC = () => {
     window.addEventListener('resize', handleResize);
 
     return () => {
-      if (mountElement) {
-        mountElement.removeChild(renderer.domElement);
-      }
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('click', onMouseClick);
+      mountRef.current?.removeChild(renderer.domElement);
     };
-  }, [isSpinning, pinDescriptions]);
+  }, [isSpinning]);
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
