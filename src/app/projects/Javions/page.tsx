@@ -60,7 +60,7 @@ const ProjectDescription: React.FC = () => {
             <div className="video-container">
             <video
                 className="video"
-                src="/videos/JavionsDemo.mp4"
+                src="/video/JavionsDemo.mp4"
                 muted
                 controls
             />

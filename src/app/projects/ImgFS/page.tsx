@@ -61,7 +61,7 @@ const ProjectsPage: React.FC = () => {
                 <div className="video-container">
                     <video
                         className="video"
-                        src="/videos/ImgFS_Demo.mp4"
+                        src="/video/ImgFS_Demo.mp4"
                         muted
                         controls
                         ref={videoRef => {

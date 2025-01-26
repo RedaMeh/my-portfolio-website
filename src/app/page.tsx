@@ -9,7 +9,7 @@ export default function Home() {
   
   function playTransitionVideo(href: string) {
     const videoElement = document.createElement('video');
-    videoElement.src = '/videos/CompletedServe.mp4'; // Path to your transition video
+    videoElement.src = '/video/CompletedServe.mp4'; // Path to your transition video
     videoElement.className = 'absolute top-0 left-0 w-full h-full object-cover';
     videoElement.autoplay = true;
     videoElement.muted = true;
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="curtain right"></div>
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/videos/ServePrep.mp4" // Use the public path
+        src="/video/ServePrep.mp4" // Use the public path
         autoPlay
         muted
       />

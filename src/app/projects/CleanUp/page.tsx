@@ -55,7 +55,7 @@ const CleanUpPage: React.FC = () => {
             <div className="video-container">
                 <video
                     className="video"
-                    src="/videos/UserVideoCleanUp.mp4"
+                    src="/video/UserVideoCleanUp.mp4"
                     muted
                     controls
                 />
@@ -64,7 +64,7 @@ const CleanUpPage: React.FC = () => {
             <div className="video-container">
                 <video
                     className="video"
-                    src="/videos/BlockingPageCleanUp.mp4"
+                    src="/video/BlockingPageCleanUp.mp4"
                     muted
                     controls
                 />
@@ -73,7 +73,7 @@ const CleanUpPage: React.FC = () => {
             <div className="video-container">
                 <video
                     className="video"
-                    src="/videos/AdminVideoCleanUp.mp4"
+                    src="/video/AdminVideoCleanUp.mp4"
                     muted
                     controls
                 />

@@ -28,7 +28,7 @@ const ProjectsPage: React.FC = () => {
         <div className="projects-page">
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="/videos/Guitar.mp4"
+                src="/video/Guitar.mp4"
                 autoPlay={!!selectedProject}
                 muted
                 onEnded={handleVideoEnd}
