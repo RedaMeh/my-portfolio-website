@@ -11,7 +11,7 @@ const Globe: React.FC = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const [isSpinning, setIsSpinning] = useState(true);
   const [popup, setPopup] = useState<{ visible: boolean, description: string, x: number, y: number }>({ visible: false, description: '', x: 0, y: 0 });
-
+  
   useEffect(() => {
     const fetchPinDescription = (filename: string, key: string) => {
       fetch(`/text/${filename}`)
@@ -31,10 +31,12 @@ const Globe: React.FC = () => {
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-
-    if (mountRef.current) {
-      mountRef.current.appendChild(renderer.domElement);
+    const mountElement = mountRef.current;
+  
+    if (mountElement) {
+      mountElement.appendChild(renderer.domElement);
     }
+    
 
     // Add a globe
     const geometry = new THREE.SphereGeometry(1, 32, 32);
@@ -176,11 +178,11 @@ const Globe: React.FC = () => {
     window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('click', onMouseClick);
-      mountRef.current?.removeChild(renderer.domElement);
+      if (mountElement) {
+        mountElement.removeChild(renderer.domElement);
+      }
     };
-  }, [isSpinning]);
+  }, [isSpinning, pinDescriptions]);
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
