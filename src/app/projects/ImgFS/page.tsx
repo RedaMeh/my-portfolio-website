@@ -39,16 +39,16 @@ const ProjectsPage: React.FC = () => {
     };
 
     return (
-        <div className="container">
-            <h1 className="title">Image-oriented File System (C)</h1>
+        <div className="containerImgFS">
+            <h1 className="titleImgFS">Image-oriented File System (C)</h1>
 
             <div>
-                <h2 className="subtitle">Overview</h2>
+                <h2 className="subtitleImgFS">Overview</h2>
                 <p>{overview}</p>
             </div>
             <div>
-                <h2 className="subtitle">Libraries used</h2>
-                <ul className="list">
+                <h2 className="subtitleImgFS">Libraries used</h2>
+                <ul className="listImgFS">
                     <li>Standard C libraries</li>
                     <li><strong>openssl/sha.h</strong>: for hashing and deduplication</li>
                     <li><strong>libvips</strong>: for image processing and resizing</li>
@@ -57,10 +57,10 @@ const ProjectsPage: React.FC = () => {
                 </ul>
             </div>
             <div>
-                <h2 className="subtitle centered">Project Demo</h2>
-                <div className="video-container">
+                <h2 className="subtitleImgFS centeredImgFS">Project Demo</h2>
+                <div className="video-containerImgFS">
                     <video
-                        className="video"
+                        className="videoImgFS"
                         src="https://reda-website-portfolio.s3.us-east-2.amazonaws.com/ImgFS_Demo.mp4"
                         muted
                         controls
@@ -71,14 +71,14 @@ const ProjectsPage: React.FC = () => {
                         }}
                     />
                 </div>
-                <p className="music-credit">Music: Weezer-My Name Is Jonas instrumental</p>
-                <div className="select-container">
+                <p className="music-creditImgFS">Music: Weezer-My Name Is Jonas instrumental</p>
+                <div className="select-containerImgFS">
                     <label htmlFor="playbackRate">Playback Speed: </label>
                     <select
                         id="playbackRate"
                         value={playbackRate}
                         onChange={handlePlaybackRateChange}
-                        className="select"
+                        className="selectImgFS"
                     >
                         <option value="0.5">0.5x</option>
                         <option value="1">1x</option>
@@ -87,22 +87,22 @@ const ProjectsPage: React.FC = () => {
                     </select>
                 </div>
             </div>
-            <div className="button-container">
+            <div className="button-containerImgFS">
                 <button 
                     onClick={() => router.push('/projects/Javions')}
-                    className="button"
+                    className="buttonImgFS"
                 >
                     ← Previous Project (Javions)
                 </button>
                 <button 
                     onClick={() => router.push('/projects')}
-                    className="button"
+                    className="buttonImgFS"
                 >
                     Back to Projects 
                 </button>
                 <button 
                     onClick={() => router.push('/projects/CleanUp')}
-                    className="button"
+                    className="buttonImgFS"
                 >
                     Next Project (CleanUp) →
                 </button>

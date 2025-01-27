@@ -35,47 +35,47 @@ const ProjectDescription: React.FC = () => {
     }, []);
 
     return (
-        <div className="container">
-            <h1 className="title">Javions (Java)</h1>
+        <div className="containerJavions">
+            <h1 className="titleJavions">Javions (Java)</h1>
             <div>
-            <h2 className="subtitle">Overview</h2>
-            <p className="text">{overview}</p>
+            <h2 className="subtitleJavions">Overview</h2>
+            <p className="textJavions">{overview}</p>
             </div>            
-            <div className="text">
-            <h2 className="subtitle">Of note:</h2>
-            <ul className="list">
+            <div className="textJavions">
+            <h2 className="subtitleJavions">Of note:</h2>
+            <ul className="listJavions">
                 <li><strong>Map</strong>: coded from scratch using openStreetMap tiles for each level of zoom, with caching for optimization</li>
                 <li><strong>JavaFX</strong>: for the Graphical User Interface (from buttons to the window to the table)</li>
             </ul>
             </div>
-            <p className="text">In the following image, you can see that the path of the aircraft is colored depending on its altitude:</p>
-            <div className="image-container">
+            <p className="textJavions">In the following image, you can see that the path of the aircraft is colored depending on its altitude:</p>
+            <div className="image-containerJavions">
             <Image
                 src={javionsPic}
                 alt="Project Image"
-                className="image"
+                className="imageJavions"
             />
             </div>
-            <p className="text">Here is a demo video of the project in action:</p>
-            <div className="video-container">
+            <p className="textJavions">Here is a demo video of the project in action:</p>
+            <div className="video-containerJavions">
             <video
-                className="video"
+                className="videoJavions"
                 src="/video/JavionsDemo.mp4"
                 muted
                 controls
             />
             </div>
-            <p className="music-credit">Music: Beatles-Blackbird instrumental</p>
-            <div className="button-container">
+            <p className="music-creditJavions">Music: Beatles-Blackbird instrumental</p>
+            <div className="button-containerJavions">
             <button 
                 onClick={() => router.push('/projects')}
-                className="button"
+                className="buttonJavions"
             >
                 ← Back to Projects
             </button>
             <button 
                 onClick={() => router.push('/projects/ImgFS')}
-                className="button"
+                className="buttonJavions"
             >
                 Next Project (ImgFS) →
             </button>

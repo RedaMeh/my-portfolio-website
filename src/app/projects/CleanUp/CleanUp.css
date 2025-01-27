@@ -1,83 +1,83 @@
-.container {
-    background-color: lightgreen;
-    padding: 20px;
-    font-family: 'Georgia', serif;
+.containerCleanUp {
+  background-color: lightgreen;
+  padding: 20px;
+  font-family: 'Georgia', serif;
   }
   
-  .title {
-    font-size: 3em;
-    color: black;
+  .titleCleanUp {
+  font-size: 3em;
+  color: black;
   }
   
-  .subtitle {
-    font-size: 2em;
-    color: grey;
-    text-decoration: underline;
+  .subtitleCleanUp {
+  font-size: 2em;
+  color: grey;
+  text-decoration: underline;
   }
   
-  .text {
-    color: rgb(62, 61, 61);
+  .textCleanUp {
+  color: rgb(62, 61, 61);
   }
   
-  .list {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: rgb(62, 61, 61);
+  .listCleanUp {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: rgb(62, 61, 61);
   }
   
-  .section {
-    margin-bottom: 20px;
+  .sectionCleanUp {
+  margin-bottom: 20px;
   }
   
-  .video-container {
-    display: flex;
-    justify-content: center;
+  .video-containerCleanUp {
+  display: flex;
+  justify-content: center;
   }
   
-  .video {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  .videoCleanUp {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   }
 
-  .select-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  .select-containerCleanUp {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   }
   
-  .select {
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
+  .selectCleanUp {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
   }
   
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  .button-containerCleanUp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
   }
   
-  .button {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    font-family: 'Georgia', serif;
-    cursor: pointer;
+  .buttonCleanUp {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
   }
 
-  .buttonText {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    font-family: 'Georgia', serif;
+  .buttonTextCleanUp {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Georgia', serif;
   }
 
-  .music-credit {
-    position: absolute;
-    font-size: 0.8em;
-    color: black;
-    font-family: 'Eurostile';
+  .music-creditCleanUp {
+  position: absolute;
+  font-size: 0.8em;
+  color: black;
+  font-family: 'Eurostile';
   }
